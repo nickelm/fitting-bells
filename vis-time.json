@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "values":[{"factor":"bar","lower":11.086258671652416,"average":11.622936661324797,"upper":12.151309900284891},{"factor":"box","lower":9.07809546830485,"average":9.517953625000008,"upper":9.957215366809125},{"factor":"dot","lower":10.985093990384609,"average":11.449387618589729,"upper":11.987789387464394},{"factor":"strip","lower":9.304937838319097,"average":9.752425200498575,"upper":10.21090227920228}]},
+    
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true,
+            "domain": [0, 13]            
+          },
+          "axis": {
+            "title": "Completion time (sec)"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Visualization"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}

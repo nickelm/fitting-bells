@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "values":[{"factor":"20, bar","lower":10.93382528818444,"average":11.47655680115273,"upper":12.026363832853038},{"factor":"20, box","lower":8.861096549192373,"average":9.25226784140968,"upper":9.664541850220278},{"factor":"20, dot","lower":10.78708272594752,"average":11.346661647230322,"upper":11.944191690962098},{"factor":"20, strip","lower":9.117148471615726,"average":9.538440669577861,"upper":10.008590247452691},{"factor":"40, bar","lower":10.9916944045911,"average":11.536264835007186,"upper":12.123613701578194},{"factor":"40, box","lower":9.286619152046784,"average":9.792843815789471,"upper":10.377743055555548},{"factor":"40, dot","lower":11.10620767575323,"average":11.593440028694376,"upper":12.079339311334275},{"factor":"40, strip","lower":9.42067374100719,"average":9.892782575539568,"upper":10.419570503597129}]},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "title": "Completion time (sec)"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Spread | Visualization"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}

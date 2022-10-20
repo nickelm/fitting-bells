@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "values":[{"factor":"50","lower":0.2907818405085203,"average":0.3206781325049079,"upper":0.35534655099997337},{"factor":"200","lower":0.26503209982467485,"average":0.3032662899324976,"upper":0.3435776706616093}]},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true,
+            "domain": [0, 0.5]
+          },
+          "axis": {
+            "title": "Abs. mean error"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Data size"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}

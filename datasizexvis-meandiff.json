@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+        "values":[{"factor":"50|bar","lower":12.55421534912384,"average":14.536655460182258,"upper":16.739191399057344},{"factor":"50|dot","lower":13.271757966861337,"average":14.850306249329586,"upper":16.53305961347216},{"factor":"50|strip","lower":12.918378010897593,"average":15.078268478556174,"upper":17.32746676985731},{"factor":"50|strip, undefined","lower":null,"average":null,"upper":null},{"factor":"200|bar","lower":7.194245362280215,"average":8.33101778593797,"upper":9.568570537778402},{"factor":"200|box","lower":5.857769052225577,"average":7.50614913965769,"upper":9.414097166204039},{"factor":"200|dot","lower":7.362219229127547,"average":8.713868088074964,"upper":10.15704958224423},{"factor":"200|strip","lower":8.736057760914807,"average":10.60212662157907,"upper":12.568318640614974}]},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true,
+            "domain": [0, 45]
+          },
+          "axis": {
+            "title": "Abs. mean error (%)"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Data size |   Visualization"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}

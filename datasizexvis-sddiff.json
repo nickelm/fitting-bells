@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "values":[
+      {"factor":"50 | bar","lower":31.383911334878942,"average":34.681533732165015,"upper":37.88770730678088},
+      {"factor":"50 | box","lower":30.366925794932513,"average":31.65678934103778,"upper":32.96914594661212},
+      {"factor":"50 | dot","lower":30.248635971288685,"average":32.69946083741599,"upper":35.5758323852053},
+      {"factor":"50 | strip","lower":16.870507727686306,"average":18.464537400273436,"upper":20.098721436442283},
+      {"factor":"200 | bar","lower":27.21038970573467,"average":29.778427634952276,"upper":32.533216531889146},
+      {"factor":"200 | box","lower":28.565766811536015,"average":29.760104570017354,"upper":31.05651555746951},
+      {"factor":"200 | dot","lower":26.475529818969715,"average":28.582010084678068,"upper":30.88548052394441},
+      {"factor":"200 | strip","lower":23.35957058029383,"average":25.227316086674914,"upper":27.218913735836512}
+    ]},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true,
+            "domain": [0, 45]
+          },
+          "axis": {
+            "title": "Abs. standard deviation error (%)"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Data size | Visualization"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}

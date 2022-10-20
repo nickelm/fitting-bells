@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "values":[{"factor":"50 | bar","lower":0.3078781233631137,"average":0.33992073495438285,"upper":0.3791079898519503},{"factor":"50 | box","lower":0.1792809062763444,"average":0.22657667605752324,"upper":0.2747768214356105},{"factor":"50 | dot","lower":0.3121278265692447,"average":0.3470801128808113,"upper":0.3896334294809343},{"factor":"50 | strip","lower":0.3121423071297598,"average":0.36599676018947075,"upper":0.4280113381956757},{"factor":"200 | bar","lower":0.2531181058751085,"average":0.2846529661521524,"upper":0.3224793554666668},{"factor":"200 | box","lower":0.2006174946980852,"average":0.2540232767662845,"upper":0.3099617463799851},{"factor":"200 | dot","lower":0.26512960641987654,"average":0.31026737654370184,"upper":0.3582179799375365},{"factor":"200 | strip","lower":0.3020165121282061,"average":0.36649043837539014,"upper":0.4373318651184444}]},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average",
+          "type": "quantitative",
+          "scale": {
+            "zero": true,
+            "domain": [0, 0.5]
+          },
+          "axis": {
+            "title": "Abs. mean error"
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal",
+          "axis": {
+            "title": "Data size | Visualization"
+          }
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "x2": {
+          "field": "upper",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+        "y": {
+          "field": "factor",
+          "sort": null,  
+          "type": "ordinal"
+        }
+      }
+    }
+  ]
+}
